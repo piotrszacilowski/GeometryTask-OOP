@@ -22,4 +22,17 @@ public class Triangle implements Figure {
     public double getCircuit() {
         return sideA + sideB + sideC;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Trójkąt, ");
+        sb.append("bok A: " + sideA + ", ");
+        sb.append("bok B: " + sideB + ", ");
+        sb.append("bok B: " + sideC + ", ");
+        sb.append("wysokość: " + height + ", ");
+        sb.append("pole: " + getArea() + ", ");
+        sb.append("obwód: " + getCircuit());
+        return sb.toString();
+    }
 }

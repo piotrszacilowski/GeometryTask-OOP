@@ -20,4 +20,14 @@ public class Circle implements Figure {
     public double getCircuit() {
         return 2 * Figure.PI * radius;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Koło: ");
+        sb.append("promień: " + radius + ", ");
+        sb.append("pole: " + getArea() + ", ");
+        sb.append("obwód: " + getCircuit());
+        return sb.toString();
+    }
 }
