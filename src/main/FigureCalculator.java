@@ -1,6 +1,7 @@
 package main;
 
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class FigureCalculator {
@@ -15,7 +16,7 @@ public class FigureCalculator {
         double b = sc.nextDouble();
         sc.nextLine();
 
-        return new Rectangle(a,b);
+        return new Rectangle(a, b);
     }
 
     public Triangle readTriangle() {
@@ -33,7 +34,7 @@ public class FigureCalculator {
         double h = sc.nextDouble();
         sc.nextLine();
 
-        return new Triangle(a,b,c,h);
+        return new Triangle(a, b, c, h);
     }
 
     public Circle readCircle() {
@@ -57,10 +58,11 @@ public class FigureCalculator {
                 case Figure.TRIANGLE:
                     return readTriangle();
                 default:
-                    //?
-            } catch (InputMismatchException e) {
-                throw e;
+                    throw new NoSuchElementException();
             }
+        } catch (InputMismatchException e) {
+            sc.nextLine();
+            throw e;
         }
     }
 }

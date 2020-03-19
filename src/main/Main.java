@@ -2,7 +2,11 @@ package main;
 
 public class Main {
     public static void main(String[] args) {
+        FigureCalculator figureCalculator = new FigureCalculator();
         printOptions();
+        Figure figure = figureCalculator.chooseOption();
+        System.out.println("Pole to: " + figure.getArea());
+        System.out.println("Obwód to: " + figure.getCircuit());
     }
 
     public static void printOptions() {

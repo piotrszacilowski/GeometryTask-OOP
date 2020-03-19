@@ -1,6 +1,6 @@
 package main;
 
-public class Circle implements Figure{
+public class Circle implements Figure {
     private final double radius;
 
     public Circle(double radius) {
