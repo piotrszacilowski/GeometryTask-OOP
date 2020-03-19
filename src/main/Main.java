@@ -5,12 +5,9 @@ public class Main {
         FigureCalculator figureCalculator = new FigureCalculator();
         printOptions();
 
-
         Figure figure = figureCalculator.chooseOption();
 
         System.out.println(figure);
-//        System.out.println("Pole to: " + figure.getArea());
-//        System.out.println("Obwód to: " + figure.getCircuit());
     }
 
     public static void printOptions() {
